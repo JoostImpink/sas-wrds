@@ -203,16 +203,6 @@ This generates:
 %myMacro(goodbye);
 ```
 
-### Passing Values as Arguments
-```sas
-%macro myMacro2(var=);
-    %put Macro called with &var;
-%mend;
-
-/* Use phrase to include arguments */
-%do_over(values=hi hello goodbye, phrase=%myMacro2(var=?););
-```
-
 ### Adding a Counter
 ```sas
 %macro myMacro2(var, num);
