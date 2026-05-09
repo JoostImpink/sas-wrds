@@ -8,7 +8,7 @@ proc sql;
 
   create table a_comp as 
 
-  select gvkey, fyear, datadate, sale, at, floor(sich/100) as sic2
+  select gvkey, fyear, datadate, sale, at, ni, floor(sich/100) as sic2
   from comp.funda
   where indfmt='INDL' and datafmt='STD' and popsrc='D' and consol='C';
 
